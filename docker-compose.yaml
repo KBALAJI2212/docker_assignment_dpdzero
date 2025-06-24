@@ -3,7 +3,7 @@ networks:
     name: dpdzero
 
 services:
-  go-service1:
+  go-container:
     build:
       context: ./service1
     container_name: go-container
@@ -15,7 +15,7 @@ services:
       timeout: 5s
       retries: 3
 
-  python-service2:
+  python-container:
     build:
       context:  ./service2
     container_name: python-container
