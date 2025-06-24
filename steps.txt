@@ -1,3 +1,18 @@
+Go Service:
+- we need to convert the given source file into Dockerfile so that we can create a docker image.
+- I created multi stage build for Go service to reduce the Docker Image Size
+
+Python Service:
+- Same as Go service, we need to write a dockerfile to convert it into docker image.
+
+
 NGINX SETUP:
-first build custom nginx docker image from base nginx image available on docker hub.
+- nginx should run locally.
+- we have to customise nginx default configuration to serve as reverse proxy.
+
+- localhost:8080/service1/ping & localhost:8080/service1/hello should route traffic to Go service running locally on port 8001.
+- localhost:8080/service2/ping & localhost:8080/service2/hello should route traffic to Python service running locally on port 8002.
+
+- now after adding desired configuration, we need to create a custom nginx docker image using a base  nginx image.
+
 
