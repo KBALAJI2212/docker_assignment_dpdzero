@@ -16,3 +16,7 @@ NGINX SETUP:
 - now after adding desired configuration, we need to create a custom nginx docker image using a base  nginx image.
 
 
+Docker-compose file:
+- need to create a default network for all services.
+- add healthchecks for containers
+
